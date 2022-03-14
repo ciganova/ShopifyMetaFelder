@@ -1,0 +1,371 @@
+{% assign materialinnenfutter = product.selected_or_first_available_variant.metafields.pinfo.materialinnenfutter %}
+{% assign matart = product.selected_or_first_available_variant.metafields.pinfo.matart %}
+{% assign gtype = product.selected_or_first_available_variant.metafields.pinfo.gtype %}
+{% assign armel = product.selected_or_first_available_variant.metafields.pinfo.armel %}
+{% assign optik = product.selected_or_first_available_variant.metafields.pinfo.optik %}
+{% assign applicat = product.selected_or_first_available_variant.metafields.pinfo.applicat %}
+{% assign ghinweis = product.selected_or_first_available_variant.metafields.pinfo.ghinweis %}
+{% assign Material = product.selected_or_first_available_variant.metafields.pinfo.Material %}
+{% assign stil = product.selected_or_first_available_variant.metafields.pinfo.stil %}
+{% assign taschen = product.selected_or_first_available_variant.metafields.pinfo.taschen %}
+{% assign verschlussdetails = product.selected_or_first_available_variant.metafields.pinfo.verschlussdetails %}
+{% assign kragen = product.selected_or_first_available_variant.metafields.pinfo.kragen %}
+{% assign rabschluss = product.selected_or_first_available_variant.metafields.pinfo.rabschluss %}
+{% assign aabschluss = product.selected_or_first_available_variant.metafields.pinfo.aabschluss %}
+{% assign mzusammensetung = product.selected_or_first_available_variant.metafields.pinfo.mzusammensetung %}
+{% assign pflhinweise = product.selected_or_first_available_variant.metafields.pinfo.pflhinweise %}
+{% assign name4 = product.selected_or_first_available_variant.metafields.pinfo.name4 %}
+{% assign aadetails= product.selected_or_first_available_variant.metafields.pinfo.aasdetails%}
+{% assign kapuze= product.selected_or_first_available_variant.metafields.pinfo.kaputze%}
+{% assign mathinweis= product.selected_or_first_available_variant.metafields.pinfo.mathinweis%}
+{% assign passform= product.selected_or_first_available_variant.metafields.pinfo.passform%}
+{% assign anz_taschen= product.selected_or_first_available_variant.metafields.pinfo.anz_taschen%}
+{% assign verschluss= product.selected_or_first_available_variant.metafields.pinfo.verschluss%}
+{% assign waschen = product.selected_or_first_available_variant.metafields.waschsymbole.waschen %}
+{% assign bleichen = product.selected_or_first_available_variant.metafields.waschsymbole.bleichen %}
+{% assign trocknen = product.selected_or_first_available_variant.metafields.waschsymbole.trocknen %}
+{% assign buegeln = product.selected_or_first_available_variant.metafields.waschsymbole.buegeln %}
+{% assign reinigen = product.selected_or_first_available_variant.metafields.waschsymbole.reinigen %}
+{% assign matzu = product.selected_or_first_available_variant.metafields.pinfo2.matzu %}
+{% assign matzufuell = product.selected_or_first_available_variant.metafields.pinfo2.matzufuell %}
+{% assign matzufutt = product.selected_or_first_available_variant.metafields.pinfo2.matzufutt %}
+
+
+
+<table >
+
+{% if product.selected_or_first_available_variant.metafields.pinfo.mzusammensetung != blank %}
+<tr>
+  <td ><strong>Material:</strong></td>
+  <td >{{ mzusammensetung }}</td>
+</tr>
+{% endif %}
+{% if product.selected_or_first_available_variant.metafields.pinfo.mzusammensetung == blank and product.selected_or_first_available_variant.metafields.pinfo2.matzu != blank%}
+<tr>
+  <td ><strong>Obermaterial:</strong></td>
+  <td >{{ matzu }}</td>
+</tr>
+{% endif %}
+{% if product.selected_or_first_available_variant.metafields.pinfo.mzusammensetung == blank and product.selected_or_first_available_variant.metafields.pinfo2.matzufuell != blank%}
+<tr>
+  <td ><strong>Füllmaterial:</strong></td>
+  <td >{{ matzufuell }}</td>
+</tr>
+{% endif %}
+{% if product.selected_or_first_available_variant.metafields.pinfo.mzusammensetung == blank and product.selected_or_first_available_variant.metafields.pinfo2.matzufutt != blank%}
+<tr>
+  <td ><strong>Futter:</strong></td>
+  <td >{{ matzufutt }}</td>
+</tr>
+{% endif %}
+
+
+{% if product.selected_or_first_available_variant.metafields.pinfo.matart != blank %}
+
+<tr>
+  <td ><strong>Materialart:</strong></td>
+  <td >{{ matart }}</td>
+</tr>
+{% endif %}
+
+{% if product.selected_or_first_available_variant.metafields.pinfo.mathinweis != blank %}
+<tr>
+  <td ><strong>Materialhinweis:</strong></td>
+  <td >{{ mathinweis }}</td>
+</tr>
+{% endif %}
+
+
+{% if product.selected_or_first_available_variant.metafields.pinfo.materialinnenfutter != blank %}
+<tr>
+  <td ><strong>Futter:</strong></td>
+  <td >{{ materialinnenfutter }}</td>
+</tr>
+{% endif %}
+  {% if product.selected_or_first_available_variant.metafields.pinfo.passform != blank %}
+  <tr>
+    <td ><strong>Passform:</strong></td>
+    <td >{{ passform }}</td>
+  </tr>
+  {% endif %}
+
+
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.ghinweis != blank %}
+  <tr>
+    <td ><strong>Größenhinweis:</strong></td>
+    <td >{{ ghinweis }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.verschluss != blank %}
+  <tr>
+    <td ><strong>Verschluss:</strong></td>
+    <td >{{ verschluss }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.verschlussdetails != blank %}
+  <tr>
+    <td ><strong>Verschlussdetails:</strong></td>
+    <td >{{ verschlussdetails }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.optik != blank %}
+  <tr>
+    <td ><strong>Optik:</strong></td>
+    <td >{{ optik }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.stil != blank %}
+  <tr>
+    <td ><strong>Stil:</strong></td>
+    <td >{{ stil }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.kragen != blank %}
+  <tr>
+    <td ><strong>Kragen:</strong></td>
+    <td >{{ kragen }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.kaputze != blank %}
+  <tr>
+    <td ><strong>Kapuze:</strong></td>
+    <td >{{ kapuze }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.anz_taschen != blank %}
+  <tr>
+    <td ><strong>Anzahl Taschen:</strong></td>
+    <td >{{ anz_taschen }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.armel != blank %}
+  <tr>
+    <td ><strong>Ärmel:</strong></td>
+    <td >{{ armel }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.aabschluss != blank %}
+  <tr>
+    <td ><strong>Ärmelabschluss:</strong></td>
+    <td >{{ aabschluss }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.aadetails != blank %}
+  <tr>
+    <td ><strong>Ärmelabschlussdetails:</strong></td>
+    <td >{{ aadetails }}</td>
+  </tr>
+  {% endif %}
+
+
+
+  {% if product.selected_or_first_available_variant.metafields.pinfo.applicat != blank %}
+  <tr>
+    <td ><strong>Applikationen:</strong></td>
+    <td >{{ applicat }}</td>
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.waschsymbole.waschen != blank %}
+  <tr>
+    <td ><strong>Waschen:</strong></td>
+      {% if waschen != blank %}
+          {% if waschen == "30" %}
+            <td >Waschen bei 30 Grad</td>
+          {% endif %}
+          {% if waschen == "30s" %}
+            <td >Waschen bei 30 Grad (schonend)</td>
+          {% endif %}
+          {% if waschen == "30ss" %}
+            <td >Waschen bei 30 Grad (sehr schonend)</td>
+          {% endif %}
+          {% if waschen == "40" %}
+            <td >Waschen bei 40 Grad</td>
+          {% endif %}
+          {% if waschen == "40s" %}
+            <td >Waschen bei 40 Grad (schonend)</td>
+          {% endif %}
+          {% if waschen == "40ss" %}
+            <td >Waschen bei 40 Grad (sehr schonend)</td>
+          {% endif %}
+          {% if waschen == "60" %}
+            <td >Waschen bei 60 Grad</td>
+          {% endif %}
+          {% if waschen == "60s" %}
+            <td >Waschen bei 60 Grad (schonend)</td>
+          {% endif %}
+          {% if waschen == "60ss" %}
+            <td >Waschen bei 60 Grad (sehr schonend)</td>
+          {% endif %}
+          {% if waschen == "75" %}
+            <td >Waschen bei 75 Grad</td>
+          {% endif %}
+          {% if waschen == "75s" %}
+            <td >Waschen bei 75 Grad (schonend)</td>
+          {% endif %}
+          {% if waschen == "75ss" %}
+            <td >Waschen bei 75 Grad (sehr schonend)</td>
+          {% endif %}
+          {% if waschen == "95" %}
+            <td >Waschen bei 95 Grad</td>
+          {% endif %}
+          {% if waschen == "95s" %}
+            <td >Waschen bei 95 Grad (schonend)</td>
+          {% endif %}
+          {% if waschen == "95ss" %}
+            <td >Waschen bei 95 Grad (sehr schonend)</td>
+          {% endif %}
+          {% if waschen == "nicht_waschen" %}
+            <td >Nicht waschen</td>
+          {% endif %}
+          {% if waschen == "handwaesche" %}
+            <td >Handwäsche</td>
+          {% endif %}
+      {% endif %}
+  </tr>
+  {% endif %}
+  {% if product.selected_or_first_available_variant.metafields.waschsymbole.bleichen != blank %}
+  <tr>
+    <td ><strong>Bleichen:</strong></td>
+    {% if bleichen != blank %}
+      <div>
+        {% if bleichen == "bleichen_nicht_erlaubt" %}
+          <td >Bleichen nicht erlaubt</td>
+        {% endif %}
+        {% if bleichen == "bleichen_erlaubt" %}
+          <td >Jegliches bleichen erlaubt (Chlor und Sauerstoff)</td>
+        {% endif %}
+        {% if bleichen == "bleichen_erlaubt_sauerstoff" %}
+          <td >Bleichen mit Sauerstoff erlaubt</td>
+        {% endif %}
+        {% if bleichen == "bleichen_erlaubt_chlor" %}
+          <td >Bleichen mit Chlor erlaubt</td>
+        {% endif %}
+      </div>
+    {% endif %}
+    </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.waschsymbole.buegeln != blank %}
+  <tr>
+        <td ><strong>Bügeln:</strong></td>
+        {% if buegeln != blank %}
+          <div>
+            {% if buegeln == "buegeln_nein" %}
+              <td >Nicht bügeln</td>
+            {% endif %}
+            {% if buegeln == "buegeln_allg" %}
+              <td >Bügeln allgemein</td>
+            {% endif %}
+            {% if buegeln == "buegeln_1" %}
+              <td >Bügeln mit geringer Temperatur</td>
+            {% endif %}
+            {% if buegeln == "buegeln_2" %}
+              <td >Bügeln mit mittlerer Temperatur</td>
+            {% endif %}
+            {% if buegeln == "buegeln_3" %}
+              <td >Bügeln mit hoher Temperatur</td>
+            {% endif %}
+          </div>
+        {% endif %}
+      </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.waschsymbole.reinigen != blank %}
+  <tr>
+    <td ><strong>Reinigen:</strong></td>
+      {% if reinigen != blank %}
+            <div>
+              {% if reinigen == "ncrein" %}
+                <td >Nicht chemisch Reinigen</td>
+              {% endif %}
+              {% if reinigen == "prein" %}
+                <td >Professionelle Reinigung</td>
+              {% endif %}
+              {% if reinigen == "rein_kwl" %}
+                <td >Reinigen mit Kohlenwasserstoff Lösungsmitteln (KWL)</td>
+              {% endif %}
+              {% if reinigen == "srein_kwl" %}
+                <td >Schonend reinigen mit Kohlenwasserstoff Lösungsmitteln (KWL)</td>
+              {% endif %}
+              {% if reinigen == "ssrein_kwl" %}
+                <td >Sehr schonend reinigen mit Kohlenwasserstoff Lösungsmitteln (KWL)</td>
+              {% endif %}
+              {% if reinigen == "rein_pce" %}
+                <td >Reinigen mit Perchlorethylen</td>
+              {% endif %}
+              {% if reinigen == "am" %}
+                <td >  Alles möglich</td>
+              {% endif %}
+              {% if reinigen == "pnrein" %}
+                <td >Professionelle Nassreinigung</td>
+              {% endif %}
+              {% if reinigen == "spn" %}
+                <td >Schonende professionelle Nassreinigung</td>
+              {% endif %}
+              {% if reinigen == "ssps" %}
+                <td >Sehr schonende professionelle Nassreinigung</td>
+              {% endif %}
+              {% if reinigen == "pnn" %}
+                <td >Professionelle Nassreinigung nicht erlaubt</td>
+              {% endif %}
+            </div>
+      {% endif %}
+  </tr>
+  {% endif %}
+
+  {% if product.selected_or_first_available_variant.metafields.waschsymbole.trocknen != blank %}
+  <tr>
+      <td ><strong>Trocknen:</strong></td>
+
+        {% if trocknen != blank %}
+          <div>
+            {% if trocknen == "trockner_nein" %}
+              <td >Nicht im Trommeltrockner trocknen</td>
+            {% endif %}
+            {% if trocknen == "trockner_allgemein" %}
+              <td >Trommeltrocknen allgemein</td>
+              {% endif %}
+            {% if trocknen == "trockner_n_t_s" %}
+              <td >Trommeltrocknen niedrige Temperatur (schonend)</td>
+            {% endif %}
+            {% if trocknen == "trockner_a_d_l" %}
+              <td >Trocknen auf der Leine</td>
+            {% endif %}
+            {% if trocknen == "trockner_l" %}
+              <td >Liegend trocknen</td>
+            {% endif %}
+            {% if trocknen == "trockner_t_n_t" %}
+              <td >Tropfnass trocknen</td>
+            {% endif %}
+            {% if trocknen == "trockner_i_s_t" %}
+              <td >Im Schatten trocknen</td>
+            {% endif %}
+            {% if trocknen == "trockner_l_i_s_t" %}
+              <td >Liegend trocknen im Schatten</td>
+            {% endif %}
+            {% if trocknen == "trockner_t_i_s_t" %}
+              <td >Tropfnass Trocknen im Schatten</td>
+            {% endif %}
+            {% if trocknen == "trockner_a_d_l_i_s_t" %}
+              <td >Trocknen auf der Leine im Schatten</td>
+            {% endif %}
+          </div>
+        {% endif %}
+      </tr>
+  {% endif %}
+
+
+</table>
+</div>
